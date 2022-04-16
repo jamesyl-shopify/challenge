@@ -25,7 +25,7 @@ interface ResponseItem extends RequestItem {
 Get a list of created products (JSON):
 
 ````bash
-~$ curl --location --request GET 'https://shopify-backend-2022-fall.herokuapp.com/'
+~$ curl --location --request GET 'http://<entry>/api/'
 
 [
     {
@@ -47,7 +47,7 @@ Get a list of created products (JSON):
 Add a new product:
 
 ```bash
-~$ curl --location --request POST 'https://shopify-backend-2022-fall.herokuapp.com/' \
+~$ curl --location --request POST 'http://<entry>/api/' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "Bowl",
@@ -65,11 +65,11 @@ Add a new product:
 
 Update the product.
 
-> It takes in `https://shopify-backend-2022-fall.herokuapp.com/:id` where `:id` is the id of the product.  
+> It takes in `http://<entry>/:id` where `:id` is the id of the product.  
 > The response is the outdated product, not the updated product.
 
 ```bash
-~$ curl --location --request PUT 'https://shopify-backend-2022-fall.herokuapp.com/61d63f03a2c85b5bd52f7a58' \
+~$ curl --location --request PUT 'http://<entry>/api/61d63f03a2c85b5bd52f7a58' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "desc": "Made with copper and includes spoons",
@@ -89,7 +89,7 @@ Delete the product.
 > This also takes in `:id` like before
 
 ```bash
-curl --location --request DELETE 'https://shopify-backend-2022-fall.herokuapp.com/61d63f03a2c85b5bd52f7a58'
+curl --location --request DELETE 'http://<entry>/api/61d63f03a2c85b5bd52f7a58'
 
 {
     "name": "Bowl",
@@ -103,5 +103,4 @@ curl --location --request DELETE 'https://shopify-backend-2022-fall.herokuapp.co
 ## Development Info
 
 Check out `.env.example` for environment variables needed.  
-Tech stack is MongoDB, Express, Node 14.  
-Deployed on Heroku.
+Tech stack is MongoDB, Express, Node 14.
