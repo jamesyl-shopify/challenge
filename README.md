@@ -2,7 +2,7 @@
 
 ## Challenge Info
 
-The application is hosted on [https://shopify-backend-2022-fall.herokuapp.com/](https://shopify-backend-2022-fall.herokuapp.com/). It may take ~30 seconds on the first load (Heroku automatically goes down when no one is using it).
+Feature chosen: Ability to create warehouses/locations and assign inventory to specific locations
 
 ## Endpoints
 
@@ -24,7 +24,7 @@ interface ResponseItem extends RequestItem {
 
 Get a list of created products (JSON):
 
-```bash
+````bash
 ~$ curl --location --request GET 'https://shopify-backend-2022-fall.herokuapp.com/'
 
 [
@@ -61,7 +61,7 @@ Add a new product:
     "totalItems": 16,
     "id": "61d63f03a2c85b5bd52f7a58"
 }
-```
+````
 
 Update the product.
 

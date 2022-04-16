@@ -6,7 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node ./dist/index.js",
     "dev": "cross-env NODE_ENV=development nodemon --ignore './src/db/*' ./src/index.ts",
-    "build": "tsc",
+    "build": "tsc && cd ./frontend && npm run build && move ./build ../dist",
     "lint": "eslint --ext .ts ."
   },
   "engines": {
