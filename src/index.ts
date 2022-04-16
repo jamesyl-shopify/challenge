@@ -15,7 +15,8 @@ if (process.env.NODE_ENV !== "testing") {
   let databaseType = "main";
   if (process.env.NODE_ENV === "development") databaseType = "dev";
   else {
-    app.use(express.static("public"));
+    console.log(path.join(__dirname, "..", "build", "index.html"));
+
     app.use(express.static("build"));
     app.get("*", function (_, res) {
       res.sendFile(path.join(__dirname, "..", "build", "index.html"));

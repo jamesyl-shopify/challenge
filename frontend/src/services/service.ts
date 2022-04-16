@@ -10,7 +10,7 @@ export interface ResponseItem extends RequestItem {
 }
 let endpoint = "http://localhost:8000";
 if (process.env.NODE_ENV === "production") {
-  endpoint = "???"; // TODO
+  endpoint = "/api";
 }
 
 export const getItems = async () => {
