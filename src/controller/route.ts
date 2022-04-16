@@ -48,7 +48,6 @@ const getRouter = () => {
     }
   });
 
-
   return router;
 };
 export default getRouter;
